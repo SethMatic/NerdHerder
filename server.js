@@ -1,6 +1,7 @@
 require("./nodelogin/node_modules/dotenv").config();
 var express = require("express");
-var exphbs = require("express-handlebars");
+
+
 
 var db = require("./models");
 
@@ -10,20 +11,12 @@ var PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("views"));
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
-app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 var syncOptions = { force: false };
 
@@ -44,4 +37,4 @@ db.sequelize.sync(syncOptions).then(function () {
   });
 });
 
-module.exports = app;
+module.exports = app.enable('strict routing');

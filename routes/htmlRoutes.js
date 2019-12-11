@@ -1,16 +1,18 @@
 var db = require("../models");
-
+var loginHTML = ("../views/login")
+var path = require("path")
 module.exports = function(app) {
-    app.get("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../real/views/login.html"));
+      // default page is login
+      app.get("/", function(req, res) {
+        res.sendFile(path.join(__dirname + "/../views/login.html"));
       });
-    
+      // home
       app.get("/home", function(req, res) {
-        res.sendFile(path.join(__dirname, "real/views/home.html"));
+        res.sendFile(path.join(__dirname + "/../views/home.html"));
       });
     
-      // If no matching route is found default to home
+      // 404
       app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "real/views/404.html"));
+        res.sendFile(path.join(__dirname + "/../views/404.html"));
       });
 };
