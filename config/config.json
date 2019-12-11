@@ -1,17 +1,17 @@
 {
     "development": {
-      "username": "root",
-      "password": "docker",
-      "database": "sheepdb",
-      "host": "localhost",
+      "username": "dj6u634l9is7vmsm",
+      "password": "apsrj1bvub78k294",
+      "database": "yisf21rynawf2b6o",
+      "host": "m7wltxurw8d2n21q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql"
     },
     "test": {
-      "username": "root",
-      "password": "docker",
-      "database": "sheepdb",
-      "host": "localhost",
-      "dialect": "mysql",
+      "username": "dj6u634l9is7vmsm",
+      "password": "apsrj1bvub78k294",
+      "database": "yisf21rynawf2b6o",
+      "host": "m7wltxurw8d2n21q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql",    
       "logging": false
     },
     "production": {
