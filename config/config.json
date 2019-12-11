@@ -1,14 +1,14 @@
 {
     "development": {
       "username": "root",
-      "password": "password",
+      "password": "docker",
       "database": "sheepdb",
       "host": "localhost",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": "password",
+      "password": "docker",
       "database": "sheepdb",
       "host": "localhost",
       "dialect": "mysql",
