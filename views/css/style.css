@@ -5,6 +5,14 @@
  *
  * Made By MaterializeCSS.com
  */
+ ul {
+  text-align: center;
+  list-style: inside;
+}
+
+ form {
+  margin-top: 50px;
+} 
 
 nav ul a,
 nav .brand-logo {
@@ -23,7 +31,7 @@ p {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  color:darkgrey;
 }
   .parallax-container .section {
     width: 100%;
