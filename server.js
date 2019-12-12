@@ -56,7 +56,7 @@ app.get('/home', function (request, response) {
   response.end();
 });
 
-app.post('/auth', function (request, response) {
+app.post('/', function (request, response) {
   var username = request.body.username;
   var password = request.body.password;
   if (username && password) {
