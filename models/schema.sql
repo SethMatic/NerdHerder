@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS `accounts` (
     `username` varchar(50) NOT NULL,
     `password` varchar(255) NOT NULL,
     `email` varchar(100) NOT NULL,
-    `activation_code` varchar(255) NOT NULL DEFAULT '',
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `activation_code`) VALUES (1, 'test', 'test', 'test@testexample23.com', '');
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES (1, 'test', 'test', 'test@testexample23.com');
