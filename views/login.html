@@ -105,7 +105,7 @@
                   <div class="login-form">
                     <h1>Login</h1>
                     <form action="/" method="POST">
-                      <input type="text" name="username" placeholder="Username" required>
+                      <input id=field1 type="text" name="username" placeholder="Username" required>
                       <input type="password" name="password" placeholder="Password" required>
                       <input type="submit">
                     </form>
@@ -248,7 +248,20 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script type="text/javascript">
+    var today = new Date();
+    var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
 
-</body>
+    function setCookie(name, value) {
+      document.cookie = name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+    }
 
-</html>
+    function storeValues(form) {
+      setCookie("field1", form.field1.value);
+      return true;
+    }
+
+    if (field1 = getCookie("field1")) document.getElementById.field1.value = field1;
+
+
+  </script>
