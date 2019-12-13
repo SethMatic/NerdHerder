@@ -26,7 +26,7 @@ var connection = mysql.createConnection({
       var email = request.body.email;
       connection.query('INSERT INTO accounts VALUES (NULL, FALSE, ?, ?, ?)', [username, password, email], function (error, results, fields) {
         console.log(results, "YAY!");
-        response.send("account created")
+        response.redirect('/');
       });
     });
     app.post('/', function (request, response) {
@@ -39,7 +39,7 @@ var connection = mysql.createConnection({
                 //   request.session.loggedin = 1;
                 connection.query('UPDATE accounts SET loggedin = TRUE WHERE username = ?', [username]);
                 // request.session.username = username;
-                response.redirect('/home');  
+                response.redirect('/home');
                 // if (request.session.end()) {
                 //     connection.query('UPDATE accounts SET loggedin = FALSE WHERE username = ?', [username]);
                 // }
@@ -59,4 +59,5 @@ var connection = mysql.createConnection({
     
   
   };
+  // module.exports = userRoutes;
   
