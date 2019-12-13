@@ -32,8 +32,58 @@
         <center>
             <img class="responsive-img" style="width: 250px;" src="images/nerds.jpg" />
         </center>
-        <div class="row center">
-          <h5 class="header col s12 light">What are you playing today?</h5>
+        <div class="row">
+          <h5 class="header col">Checkout some Games</h5>
+        </div>
+        <div class="row gamelist">
+          <div class="card col s4">
+            <div class="card-image">
+              <img src="http://materializecss.com/images/sample-1.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+          <div class="card col s4">
+            <div class="card-image">
+              <img src="http://materializecss.com/images/sample-1.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <h5 class="header col s12 light">Popular Games World Wide</h5>
+          <p id ="title1"></p>
+          <div class="col s12 m7"></div>
+          <div class="card">
+            <img width="300" id="gamePic1" src="" alt="" >
+          </div>
+        </div>
+        <div class="row">
+          <h5 class="header col s12 light">Popular Games World Wide</h5>
+          <p id ="title2"></p>
+          <div class="col s12 m7"></div>
+          <div class="card">
+            <img width="300" id="gamePic2" src="" alt="" >
+          </div>
+        </div>
+        <div class="row">
+          <h5 class="header col s12 light">Popular Games World Wide</h5>
+          <p id ="title3"></p>
+          <div class="col s12 m7"></div>
+          <div class="card">
+            <img width="300" id="gamePic3" src="" alt="" >
+          </div>
         </div>
 		<br><br>
 		<div class="section"></div>
@@ -65,9 +115,9 @@
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Wish List</h5>
             <p class="light"><ul>
-                <li>Game 1</li>
-                <li>Game 2</li>
-                <li>Game 3</li>
+                <li id='games-owned'></li>
+                <li id='games-owned'></li>
+                <li id='games-owned'></li>
               </ul></p>
           </div>
         </div>
@@ -165,8 +215,12 @@
     </div>
   </footer>
   <!--  Scripts-->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/rawgApi.js"></script>
+  
   </body>
 </html>
