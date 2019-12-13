@@ -20,4 +20,12 @@ $.ajax(settings).done(function (response) {
 	console.log(random.background_image)
 
 
+
+
+ function popGames(){
+  document.getElementById("title").innerHTML = random.name;
+  document.getElementById("gamePic").src = random.background_image;
+  }
+
+  popGames();
 });
