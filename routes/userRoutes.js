@@ -37,12 +37,13 @@ var connection = mysql.createConnection({
           connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function (error, results, fields) {
               if (results.length > 0) {
                 //   request.session.loggedin = 1;
-                connection.query('UPDATE accounts SET loggedin = TRUE WHERE username = ?', [username])
+                connection.query('UPDATE accounts SET loggedin = TRUE WHERE username = ?', [username]);
                 // request.session.username = username;
+                response.redirect('/home');  
+                // if (request.session.end()) {
+                //     connection.query('UPDATE accounts SET loggedin = FALSE WHERE username = ?', [username]);
+                // }
                 
-                response.redirect('/home');
-                
-                  
               } else {
                   response.send('Incorrect Username and/or Password!');
                   console.log('wrong user/pass')
@@ -57,6 +58,5 @@ var connection = mysql.createConnection({
   });
     
   
-  
-  
   };
+  
