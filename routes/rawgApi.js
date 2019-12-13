@@ -1,4 +1,8 @@
+
+
 const axios = require("axios");
+
+
 
 axios({
     "method":"GET",
@@ -11,11 +15,28 @@ axios({
     })
     .then((response)=>{
 		var game = response.data.results
-	  console.log(game[0])
+		var random = game[Math.floor(Math.random() * game.length)];
+		var gamePic = random.background_image
+		var popGame = random.name
+		console.log(random.name)
+	  console.log(random.background_image)
+	//   for (var i = 0; i < game.length; i++) {
+	// 	console.log(game[i]);}
 	//   console.log(game.background_image)
 	//   console.log(game.platforms)
     })
     .catch((error)=>{
       console.log(error)
-	})
-	
+  })
+  
+  // function popGames(){
+  //   var div = "<div>"
+  // document.getElementById("title").innerHTML = random.name;
+  // document.getElementById("gamePic").src = random.background_image;
+  // }
+
+  // popGames();
+  // // $("#gamePic").attr("src", gamePic,popGame)
+
+  
+ 
