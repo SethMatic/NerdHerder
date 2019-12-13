@@ -6,13 +6,7 @@ module.exports = function(app) {
       });
       // home
       app.get("/home", function(req, res) {
-        if (req.session.loggedin) {
           res.sendFile(path.join(__dirname + "/../views/home.html"));
-        } else {
-          res.send('Please login to view this page!')
-          console.log("log in, bitch")
-        }
-        res.end();
       });
       // register page
       app.get("/register", function(req, res) {

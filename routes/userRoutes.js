@@ -32,12 +32,16 @@ var connection = mysql.createConnection({
     app.post('/', function (request, response) {
       var username = request.body.username;
       var password = request.body.password;
+    //   var loggedin = request.session.loggedin;
       if (username && password) {
           connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function (error, results, fields) {
               if (results.length > 0) {
-                  request.session.loggedin = 1;
-                  request.session.username = username;
-                  response.redirect('/home');
+                //   request.session.loggedin = 1;
+                connection.query('UPDATE accounts SET loggedin = TRUE WHERE username = ?', [username])
+                // request.session.username = username;
+                
+                response.redirect('/home');
+                
                   
               } else {
                   response.send('Incorrect Username and/or Password!');
