@@ -35,7 +35,7 @@ module.exports = function (app) {
     if (username && password) {
       connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?', [username, password], function (error, results, fields) {
         if (results.length > 0) {
-          request.session.loggedin = 1;
+          // request.session.loggedin = 1;
           request.session.username = username;
           response.redirect('/home');
 
