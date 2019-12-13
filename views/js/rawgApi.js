@@ -22,8 +22,6 @@ $.ajax(settings).done(function (response) {
 	console.log(random.background_image)
 
 
-
-
  function popGames1(){
   document.getElementById("title1").innerHTML = random.name;
   document.getElementById("gamePic1").src = random.background_image;
@@ -37,39 +35,13 @@ function popGames3(){
 	document.getElementById("gamePic3").src = random3.background_image;
 		}
 
+	
   popGames1();
   popGames2();
   popGames3();
 });
 
-// $("gamesOwned").attr("src", "https://api.rawg.io/api/games?search=" + 
 
-// $("gamesOwned").on("click", function () {
-// 	genre.push($(this).attr('title'));
-// // $('.games-owned').each(function() {
-//     var default_value = this.value;
-//     $(this).focus(function() {
-//         if(this.value == default_value) {
-//             this.value = '';
-//         }
-//     });
-//     $(this).blur(function() {
-//         if(this.value == '') {
-//             this.value = default_value;
-//         }
-//     });
-// });
-// function example_append() {
-//     $('#example').append($('#example-textarea').val());
-// }
-
-// https://api.rawg.io/api/games?search= user input
-
-// $(document).ready(function(){
-//     $("#submitBtn").click(function(){        
-//         $("#myForm").submit(); // Submit the form
-//     });
-// });
 
 $('#btn_createList').click(function(){
     $('.ul_current').append($('<li>', {
@@ -81,4 +53,51 @@ $('#btn_wishList').click(function(){
     $('.ul_wish').append($('<li>', {
          text: $('#input_wishName').val()
     }));
+});
+
+/////trending world wide
+
+var tsettings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://rawg-video-games-database.p.rapidapi.com/games?dates=2019-10-10,2020-10-10&ordering=-added",
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com",
+		"x-rapidapi-key": "43acb27062msh71014d2b6f89ea0p19fc0bjsn4d672d238f0f"
+	}
+}
+
+$.ajax(tsettings).done(function (response) {
+	console.log(response.results);
+
+	var trendgame = response.results
+	var trending1= trendgame[Math.floor(Math.random() * trendgame.length)];
+	var trending2 = trendgame[Math.floor(Math.random() * trendgame.length)];
+	var trending3 = trendgame[Math.floor(Math.random() * trendgame.length)];
+	var trendingPic = trendgame.background_image
+	var trendingTitle = trendgame.name
+	console.log(trendgame.name)
+	console.log(trendgame.background_image)
+		
+
+
+
+
+	function hotGames1(){
+		document.getElementById("trend1").innerHTML = trending1.name;
+		document.getElementById("trendPic1").src = trending1.background_image;
+		}
+	  function hotGames2(){
+		  document.getElementById("trend2").innerHTML = trending2.name;
+		  document.getElementById("trendPic2").src = trending2.background_image;
+		  }
+	  function hotGames3(){
+		  document.getElementById("trend3").innerHTML = trending3.name;
+		  document.getElementById("trendPic3").src = trending3.background_image;
+	  }
+
+hotGames1();
+hotGames2();
+hotGames3();
 });
