@@ -41,3 +41,20 @@ function popGames3(){
   popGames2();
   popGames3();
 });
+
+$('.games-owned').each(function() {
+    var default_value = this.value;
+    $(this).focus(function() {
+        if(this.value == default_value) {
+            this.value = '';
+        }
+    });
+    $(this).blur(function() {
+        if(this.value == '') {
+            this.value = default_value;
+        }
+    });
+});
+function example_append() {
+    $('#example').append($('#example-textarea').val());
+}
