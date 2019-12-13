@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
   database: 'sheepdb'
 });
 
-module.exports = function(app) {
+module.exports = function (app) {
   app.post('/register', function (request, response) {
     // Create variables and set to the post data
     var username = request.body.username;
