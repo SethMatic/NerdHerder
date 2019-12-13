@@ -42,19 +42,43 @@ function popGames3(){
   popGames3();
 });
 
-$('.games-owned').each(function() {
-    var default_value = this.value;
-    $(this).focus(function() {
-        if(this.value == default_value) {
-            this.value = '';
-        }
-    });
-    $(this).blur(function() {
-        if(this.value == '') {
-            this.value = default_value;
-        }
-    });
+// $("gamesOwned").attr("src", "https://api.rawg.io/api/games?search=" + 
+
+// $("gamesOwned").on("click", function () {
+// 	genre.push($(this).attr('title'));
+// // $('.games-owned').each(function() {
+//     var default_value = this.value;
+//     $(this).focus(function() {
+//         if(this.value == default_value) {
+//             this.value = '';
+//         }
+//     });
+//     $(this).blur(function() {
+//         if(this.value == '') {
+//             this.value = default_value;
+//         }
+//     });
+// });
+// function example_append() {
+//     $('#example').append($('#example-textarea').val());
+// }
+
+// https://api.rawg.io/api/games?search= user input
+
+// $(document).ready(function(){
+//     $("#submitBtn").click(function(){        
+//         $("#myForm").submit(); // Submit the form
+//     });
+// });
+
+$('#btn_createList').click(function(){
+    $('.ul_current').append($('<li>', {
+         text: $('#input_listName').val()
+    }));
 });
-function example_append() {
-    $('#example').append($('#example-textarea').val());
-}
+
+$('#btn_wishList').click(function(){
+    $('.ul_wish').append($('<li>', {
+         text: $('#input_wishName').val()
+    }));
+});
