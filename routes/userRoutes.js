@@ -26,7 +26,7 @@ module.exports = function (app) {
     var email = request.body.email;
     connection.query('INSERT INTO accounts VALUES (NULL, FALSE, ?, ?, ?)', [username, password, email], function (error, results, fields) {
       console.log(response, "YAY!");
-      response.send("account created")
+      response.redirect('/login.html')
     });
   });
   app.post('/', function (request, response) {
