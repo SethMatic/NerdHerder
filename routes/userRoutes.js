@@ -26,6 +26,7 @@ module.exports = function (app) {
     var email = request.body.email;
     connection.query('INSERT INTO accounts VALUES (NULL, FALSE, ?, ?, ?)', [username, password, email], function (error, results, fields) {
       console.log(response, "YAY!");
+      console.log(connection, "this is your connection");
       response.redirect('/login.html')
     });
   });
@@ -33,22 +34,24 @@ module.exports = function (app) {
   app.use(session({
     secret: 'secret',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    cookies: {}
   }));
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
   module.exports = function (app) {
-    app.post('/register', function (request, response) {
-      // Create variables and set to the post data
-      var username = request.body.username;
-      var password = request.body.password;
-      var email = request.body.email;
-      connection.query('INSERT INTO accounts VALUES (NULL, FALSE, ?, ?, ?)', [username, password, email], function (error, results, fields) {
-        console.log(results, "YAY!");
-        response.redirect('/');
-      });
-    });
+    // app.post('/register', function (request, response) {
+    //   // Create variables and set to the post data
+    //   var username = request.body.username;
+    //   var password = request.body.password;
+    //   var email = request.body.email;
+    //   connection.query('INSERT INTO accounts VALUES (NULL, FALSE, ?, ?, ?)', [username, password, email], function (error, results, fields) {
+    //     console.log(connection, "this is your connection")
+    //     console.log(results, "GAY");
+    //     response.redirect('/');
+    //   });
+    // });
     app.post('/', function (request, response) {
       var username = request.body.username;
       var password = request.body.password;
