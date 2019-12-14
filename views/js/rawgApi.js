@@ -32,11 +32,12 @@ $.ajax(settings).done(function (response) {
 		imageTag.attr('src', image);
 
 		var spanDiv = $('<span class="card-title">').text(name);
-
+		var releaseTxt = game[b].released
+		var contentDiv = $('<div class="card-content">').text(releaseTxt);
 
 				
 		imgaeDiv.append(imageTag,spanDiv);
-		display.append(imgaeDiv);
+		display.append(imgaeDiv,contentDiv);
 		// Append display content to index
 		$("#gamelist").append(display);
 		console.log(image)
