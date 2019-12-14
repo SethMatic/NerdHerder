@@ -93,16 +93,11 @@
                 <form action="/" method="POST">
                     <input type="text" name="username" id="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit" onclick="store()">
+                    <input type="submit">
                 </form>
             </div>
         </body>
-        <script>
-          function store(){
-          var inputUsername= document.getElementById("username");
-          localStorage.setItem("username", inputUsername.value);
-          }
-        </script>
+      
         
 
     <div class="section"></div>

@@ -3,9 +3,10 @@ var express = require("express");
 var mysql = require('mysql');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser')
 var path = require('path');
 var ejs = require('ejs');
-var cookieParser = require('cookie-parser');
+
 
 var db = require("./models");
 
@@ -23,6 +24,7 @@ var connection = mysql.createConnection({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("views"));
+app.use(cookieParser());
 
 
 

@@ -85,13 +85,13 @@
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Leave Reviews and Tips & Tricks</h5>
             <div class="col-md-5 offset-md-3">
-                <form id="cms">
+                <form id="cms" action="/home" method="post">
                   <div class="form-group">
                     <label for="title">Game:</label>
-                    <input type="text" class="form-control" id="title">
+                    <input type="text" name="title" class="form-control" id="title">
                     <br />
                     <label for="body">Text:</label>
-                    <textarea class="form-control" rows="10" id="body"></textarea>  
+                    <textarea class="form-control" rows="10" id="body" name="body"></textarea>  
                     <div class="form-group">
                         <label for="category">Select Category:</label>
                         <select class="custom-select" id="category">
@@ -101,7 +101,7 @@
                         </select>
                       </div>
                       <br />
-                    <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+                    <input type="submit" class="btn btn-success submit btn-lg">Submit</input>
                   </div>
             <!-- <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p> -->
           </div>
