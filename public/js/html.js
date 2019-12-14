@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     database: 'sheepdb'
   });
 var app = express();
-// require('../../routes/userRoutes')(app)
+require('../../routes/userRoutes')(app)
 app.use(session({
     secret: 'secret',
     resave: true,
@@ -22,7 +22,7 @@ module.exports = function(app) {
         var username = request.body.username;
         connection.query('SELECT * FROM accounts WHERE username = ?', [username], function (error, results, fields) {
             response.contentType('html');
-            response.write(username, $("#displayedUser"));
+            //response.write(username, $("#displayedUser"));
             console.log(response, "AsdasdAFASF!!!")
         })
         

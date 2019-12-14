@@ -31,13 +31,13 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Welcome Back</h1>
+        <h1 id="bitchass" class="header center teal-text text-lighten-2">Welcome Back</h1>
         <h2 id = "displayedUser"></h2>
-        <!-- <script>
-          var displayedUser = document.getElementById("user");
-          displayedUser.innerHTML = "hi";
-
-        </script> -->
+         <script type="text/javascript" src="jquery-3.4.1.min.js">
+            var localUsername = localStorage.getItem("username");
+            console.log(localStorage.getItem("username"))
+            $("#bitchass").append(localStorage.getItem("username"))
+          </script>
         <center>
             <img class="responsive-img" style="width: 250px;" src="images/nerds.jpg" />
         </center>

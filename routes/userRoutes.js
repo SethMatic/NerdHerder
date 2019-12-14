@@ -10,10 +10,11 @@ var connection = mysql.createConnection({
     database: 'sheepdb'
   });
   
+  
   app.use(session({
     secret: 'secret',
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
   }));
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
@@ -44,6 +45,7 @@ var connection = mysql.createConnection({
                 //     connection.query('UPDATE accounts SET loggedin = FALSE WHERE username = ?', [username]);
                 // }
                 
+                
               } else {
                   response.send('Incorrect Username and/or Password!');
                   console.log('wrong user/pass')
@@ -55,8 +57,8 @@ var connection = mysql.createConnection({
           console.log('enter user/pass')
           response.end();
       }
+      
   });
-    
   
   };
   // module.exports = userRoutes;

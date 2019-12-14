@@ -25,6 +25,7 @@ app.use(express.json());
 app.use(express.static("views"));
 
 
+
 // Routes
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
