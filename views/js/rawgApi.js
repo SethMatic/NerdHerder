@@ -21,8 +21,23 @@ $.ajax(settings).done(function (response) {
 	console.log(random.name)
 	console.log(random.background_image)
 
-	for (var b = 0; b < 20; b++){
-		var display = $("<div class='bar-display blue-grey'>");
+	for (var b = 0; b < 3; b++){
+		var display = $("<div class='card col s4'>"); 
+		var name = game[b].name;
+		
+		var image = game[b].background_image;
+		var imgaeDiv = $("<div class='card-image'>");
+
+        var imageTag = $("<img>");
+		imageTag.attr('src', image);
+
+		var spanDiv = $('<span class="card-title">').text(name);
+				
+		imgaeDiv.append(imageTag,spanDiv);
+		display.append(imgaeDiv);
+		// Append display content to index
+		$("#gamelist").append(display);
+		console.log(image)
 	}
 
 
