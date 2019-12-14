@@ -32,7 +32,7 @@ app.use(cookieParser());
 require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 require("./routes/userRoutes.js")(app);
-require("./public/js/html")(app);
+
 
 var syncOptions = { force: false };
 
