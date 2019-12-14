@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="../routes/userRoutes.js"></script>
   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet"> -->
   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
 </head>
@@ -28,7 +30,9 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
+
         <h1 class="header center brown-text">Welcome Back User Name</h1>
+
         <center>
             <img class="circle responsive-img" style="width: 250px;" src="images/nerds.jpg" />
         </center>
@@ -120,13 +124,13 @@
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Leave Reviews and Tips & Tricks</h5>
             <div class="col-md-5 offset-md-3">
-                <form id="cms">
+                <form id="cms" action="/home" method="post">
                   <div class="form-group">
                     <label for="title">Game:</label>
-                    <input type="text" class="form-control" id="title">
+                    <input type="text" name="title" class="form-control" id="title">
                     <br />
                     <label for="body">Text:</label>
-                    <textarea class="form-control" rows="10" id="body"></textarea>  
+                    <textarea class="form-control" rows="10" id="body" name="body"></textarea>  
                     <div class="form-group">
                         <label for="category">Select Category:</label>
                         <select class="custom-select" id="category">
@@ -136,7 +140,9 @@
                         </select>
                       </div>
                       <br />
-                    <button type="submit" class="btn btn-success submit btn-lg brown">Submit</button>
+
+                    <input type="submit" class="btn btn-success submit btn-lg"></input>
+
                   </div>
             <!-- <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p> -->
           </div>
