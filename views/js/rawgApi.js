@@ -21,6 +21,12 @@ $.ajax(settings).done(function (response) {
 	console.log(random.name)
 	console.log(random.background_image)
 
+	for (var b = 0; b < 20; b++){
+		var display = $("<div class='card col s4'>"); 
+		var name = game[b].name;
+		
+		var image = game[b].background_image;
+		var imgaeDiv = $("<div class='card-image'>");
 
  function popGames1(){
   document.getElementById("title1").innerHTML = random.name;
@@ -40,7 +46,6 @@ function popGames3(){
   popGames2();
   popGames3();
 });
-
 
 
 $('#btn_createList').click(function(){
