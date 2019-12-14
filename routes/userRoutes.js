@@ -5,10 +5,10 @@ var session = require('express-session')
 var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser')
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'docker',
-    database: 'sheepdb'
+    host: (process.env.HOST || 'localhost'),
+    user: (process.env.USER || 'root'),
+    password: (process.env.PASSWORD || 'docker'),
+    database: (process.env.DATABASE || 'sheepdb')
   });
   
   
