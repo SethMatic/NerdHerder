@@ -21,7 +21,7 @@ $.ajax(settings).done(function (response) {
 	console.log(random.name)
 	console.log(random.background_image)
 
-	for (var b = 0; b < 3; b++){
+	for (var b = 0; b < 20; b++){
 		var display = $("<div class='card col s4'>"); 
 		var name = game[b].name;
 		
@@ -32,6 +32,8 @@ $.ajax(settings).done(function (response) {
 		imageTag.attr('src', image);
 
 		var spanDiv = $('<span class="card-title">').text(name);
+
+
 				
 		imgaeDiv.append(imageTag,spanDiv);
 		display.append(imgaeDiv);
