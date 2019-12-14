@@ -60,8 +60,11 @@
         <div class="row">
           <h5 class="header col">Checkout Some Top All-Time Games</h5>
         </div>
-        <div class="row gamelist">
-          <div class="card col s4">
+        <div class="row gamelist1">
+          <div id="gamelist">
+
+          </div>
+          <!-- <div class="card col s4 ">
             <div class="card-image">
               <img src="http://materializecss.com/images/sample-1.jpg">
               <span class="card-title">Card Title</span>
@@ -72,23 +75,13 @@
             <div class="card-action">
               <a href="#">This is a link</a>
             </div>
-          </div>
-          <div class="card col s4">
-            <div class="card-image">
-              <img src="http://materializecss.com/images/sample-1.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
+          </div> -->
+          
         </div>
         <div class="row">
           <h5 class="header col s12 light">Popular Games World Wide</h5>
           <p id ="title1"></p>
+          <p id ="info1"></p>
           <div class="col s12 m7"></div>
           <div class="card">
             <img width="300" id="gamePic1" src="" alt="" >
@@ -97,6 +90,7 @@
         <div class="row">
           <h5 class="header col s12 light">Popular Games World Wide</h5>
           <p id ="title2"></p>
+          <p id ="info2"></p>
           <div class="col s12 m7"></div>
           <div class="card">
             <img width="300" id="gamePic2" src="" alt="" >
@@ -105,6 +99,7 @@
         <div class="row">
           <h5 class="header col s12 light">Popular Games World Wide</h5>
           <p id ="title3"></p>
+          <p id ="info3"></p>
           <div class="col s12 m7"></div>
           <div class="card">
             <img width="300" id="gamePic3" src="" alt="" >
@@ -113,6 +108,34 @@
       </div>
     </div>
     <br><br>
+  <!-- //////trending games//// -->
+  <div class="row">
+    <h5 class="header col s12 light">Trending Games World Wide</h5>
+    <p id ="trend1"></p>
+    <p id ="info1"></p>
+    <div class="col s12 m7"></div>
+    <div class="card">
+      <img width="300" id="trendPic1" src="" alt="" >
+    </div>
+  </div>
+  <div class="row">
+    <h5 class="header col s12 light">Trending Games World Wide</h5>
+    <p id ="trend2"></p>
+    <p id ="info2"></p>
+    <div class="col s12 m7"></div>
+    <div class="card">
+      <img width="300" id="trendPic2" src="" alt="" >
+    </div>
+  </div>
+  <div class="row">
+    <h5 class="header col s12 light">Trending Games World Wide</h5>
+    <p id ="trend3"></p>
+    <p id ="info3"></p>
+    <div class="col s12 m7"></div>
+    <div class="card">
+      <img width="300" id="trendPic3" src="" alt="" >
+    </div>
+  </div>
 
   <div class="container">
     <div class="section">
@@ -122,22 +145,28 @@
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Games You're Playing Now</h5>
-            <p class="light"><ul>
-                <li>Game 1</li>
-                <li>Game 2</li>
-                <li>Game 3</li>
-              </ul></p>
+            <input id="gamesOwned" type="text" class="validate">
+            <label for="gamesOwned">Games Owned</label>
+            <p class="light">
+
+              <input id="input_listName" /><button id="btn_createList">add</button>
+              <ul class="ul_current"></ul>
+
+             
+            </p>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">Wish List</h5>
-            <p class="light"><ul>
-                <li id='games-owned'></li>
-                <li id='games-owned'></li>
-                <li id='games-owned'></li>
-              </ul></p>
+            <h5 class="center">Games You Wish You Were Playing</h5>
+            <input id="gamesOwned" type="text" class="validate">
+            <label for="gamesOwned">Wish List</label>
+            <p class="light"> 
+
+              <input id="input_wishName" /><button id="btn_wishList">add</button>
+              <ul class="ul_wish"></ul></p>
+
           </div>
         </div>
         <div class="col s12 m4">
